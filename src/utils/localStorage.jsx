@@ -1,0 +1,352 @@
+const employees = [
+  {
+    id: 1,
+    firstName: "Amit",
+    lastName: "Sharma",
+    email: "employee1@example.com",
+    password: "123",
+    taskNumber: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0,
+    },
+    tasks: [
+      {
+        taskTitle: "Complete Project Report",
+        taskDescription: "Draft and finalize the quarterly project report.",
+        dateAdded: "2025-01-10",
+        category: "Documentation",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Update Database Schema",
+        taskDescription: "Review and apply changes to the database schema.",
+        dateAdded: "2025-01-08",
+        category: "Database",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Team Meeting",
+        taskDescription: "Attend the weekly team meeting and discuss updates.",
+        dateAdded: "2025-01-11",
+        category: "Meetings",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 2,
+    firstName: "Sneha",
+    lastName: "Iyer",
+    email: "employee2@example.com",
+    password: "123",
+    taskNumber: {
+      active: 1,
+      newTask: 0,
+      completed: 1,
+      failed: 1,
+    },
+    tasks: [
+      {
+        taskTitle: "Fix Frontend Bugs",
+        taskDescription: "Resolve reported issues in the UI.",
+        dateAdded: "2025-01-09",
+        category: "Frontend",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Code Review",
+        taskDescription: "Review code changes for the new feature.",
+        dateAdded: "2025-01-07",
+        category: "Development",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+      {
+        taskTitle: "Prepare Presentation",
+        taskDescription: "Create slides for the upcoming client presentation.",
+        dateAdded: "2025-01-06",
+        category: "Design",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    firstName: "Rajesh",
+    lastName: "Kumar",
+    email: "employee3@example.com",
+    password: "123",
+    taskNumber: {
+      active: 2,
+      newTask: 1,
+      completed: 0,
+      failed: 0,
+    },
+    tasks: [
+      {
+        taskTitle: "Write API Documentation",
+        taskDescription: "Document the APIs for external developers.",
+        dateAdded: "2025-01-05",
+        category: "Documentation",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Refactor Backend Code",
+        taskDescription: "Improve the performance of backend modules.",
+        dateAdded: "2025-01-04",
+        category: "Backend",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 4,
+    firstName: "Priya",
+    lastName: "Reddy",
+    email: "employee4@example.com",
+    password: "123",
+    taskNumber: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
+    tasks: [
+      {
+        taskTitle: "Update Knowledge Base",
+        taskDescription: "Add new entries to the internal knowledge base.",
+        dateAdded: "2025-01-03",
+        category: "Documentation",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+      {
+        taskTitle: "Security Audit",
+        taskDescription: "Conduct a security audit of the application.",
+        dateAdded: "2025-01-01",
+        category: "Security",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Database Migration",
+        taskDescription: "Migrate data from the old database to the new one.",
+        dateAdded: "2024-12-31",
+        category: "Database",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+      },
+    ],
+  },
+  {
+    id: 5,
+    firstName: "Vikram",
+    lastName: "Patil",
+    email: "employee5@example.com",
+    password: "123",
+    taskNumber: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 0,
+    },
+    tasks: [
+      {
+        taskTitle: "Develop Test Cases",
+        taskDescription: "Write test cases for the authentication module.",
+        dateAdded: "2025-01-02",
+        category: "Testing",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Optimize Queries",
+        taskDescription: "Improve the performance of SQL queries.",
+        dateAdded: "2025-01-02",
+        category: "Database",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 6,
+    firstName: "Anjali",
+    lastName: "Verma",
+    email: "employee6@example.com",
+    password: "123",
+    taskNumber: {
+      active: 3,
+      newTask: 2,
+      completed: 2,
+      failed: 1,
+    },
+    tasks: [
+      {
+        taskTitle: "Client Onboarding",
+        taskDescription: "Assist in onboarding a new client.",
+        dateAdded: "2025-01-12",
+        category: "Client Management",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+      },
+      {
+        taskTitle: "Data Backup",
+        taskDescription: "Perform a scheduled backup of server data.",
+        dateAdded: "2025-01-11",
+        category: "IT Operations",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 7,
+    firstName: "Kunal",
+    lastName: "Desai",
+    email: "employee7@example.com",
+    password: "123",
+    taskNumber: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 0,
+    },
+    tasks: [
+      {
+        taskTitle: "System Upgrade",
+        taskDescription: "Upgrade office computers to the latest OS version.",
+        dateAdded: "2025-01-08",
+        category: "IT Support",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 8,
+    firstName: "Meera",
+    lastName: "Nair",
+    email: "employee8@example.com",
+    password: "123",
+    taskNumber: {
+      active: 2,
+      newTask: 0,
+      completed: 2,
+      failed: 1,
+    },
+    tasks: [
+      {
+        taskTitle: "Create Marketing Plan",
+        taskDescription: "Draft the marketing strategy for Q1.",
+        dateAdded: "2025-01-06",
+        category: "Marketing",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+      },
+      {
+        taskTitle: "Social Media Campaign",
+        taskDescription: "Launch a campaign for the new product.",
+        dateAdded: "2025-01-05",
+        category: "Marketing",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+      },
+    ],
+  },
+  {
+    id: 9,
+    firstName: "Siddharth",
+    lastName: "Rao",
+    email: "employee9@example.com",
+    password: "123",
+    taskNumber: {
+      active: 1,
+      newTask: 0,
+      completed: 0,
+      failed: 1,
+    },
+    tasks: [
+      {
+        taskTitle: "Client Feedback Analysis",
+        taskDescription: "Analyze feedback from recent client surveys.",
+        dateAdded: "2025-01-03",
+        category: "Client Relations",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: true,
+      },
+    ],
+  },
+  // Continue adding employees following similar structure.
+];
+
+
+const admin = [
+  {
+    "id": 1,
+    "firstName": "Anil",
+    "lastName": "Mehta",
+    "email": "admin@example.com",
+    "password": "123"
+  }
+];
+
+
+export const setLocalStorage = () => {
+    localStorage.setItem('employees', JSON.stringify(employees))
+    localStorage.setItem('admin', JSON.stringify(admin))
+}
+
+export const getLocalStorage = () => {
+    const employees = JSON.parse(localStorage.getItem('employees'))
+    const admin = JSON.parse(localStorage.getItem('admin'))
+
+    return {employees, admin}
+}
