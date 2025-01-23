@@ -2,7 +2,7 @@ import React from 'react'
 
 const TaskListNumbers = ({data}) => {
   return (
-    <div className='flex mt-10 justify-between gap-5 screen'>
+    <div className='flex mt-10 justify-between gap-5 screen overflow-x-auto'>
         <div className='rounded-xl w-[45%] py-5 px-10 bg-yellow-400'>
             <h2 className='text-2xl font-semibold'>{data.taskNumber.active}</h2>
             <h3 className='text-xl font-medium'>{data.taskNumber.active > 1 ? 'Active Tasks' : 'Active Task'}</h3>
@@ -11,7 +11,7 @@ const TaskListNumbers = ({data}) => {
             <h2 className='text-2xl font-semibold'>{data.taskNumber.newTask}</h2>
             <h3 className='text-xl font-medium'>{data.taskNumber.newTask > 1 ? 'New Tasks' : 'New Task'}</h3>
         </div>
-        <div className='rounded-xl w-[45%] py-5 px-10 bg-green-400'>
+        <div className='rounded-xl w-[45%] py-5 px-10 bg-green-400 max-[400px]: px-3'>
             <h2 className='text-2xl font-semibold'>{data.taskNumber.completed}</h2>
             <h3 className='text-xl font-medium'>{data.taskNumber.completed > 1 ? 'Completed Tasks' : 'Completed Task'}</h3>
         </div>

@@ -6,13 +6,13 @@ const AllTasks = () => {
 
     return (
         <div className='bg-[#1c1c1c] p-5 mt-5 rounded h-60'>
-            <div className='bg-emerald-700 mb-2 py-2 px-4 flex justify-between rounded'>
-                <h2 className='w-1/6 text-lg font-medium flex justify-center'>Employee Name</h2>
-                <h3 className='w-1/6 text-lg font-medium flex justify-center'>Employee ID</h3>
-                <h3 className='w-1/6 text-lg font-medium flex justify-center'>New Tasks</h3>
-                <h5 className='w-1/6 text-lg font-medium flex justify-center'>Active Tasks</h5>
-                <h5 className='w-1/6 text-lg font-medium flex justify-center'>Completed</h5>
-                <h5 className='w-1/6 text-lg font-medium flex justify-center'>Failed</h5>
+            <div id="emp" className='bg-emerald-700 mb-2 py-2 px-4 flex justify-between rounded'>
+                <h2 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>Employee Name</h2>
+                <h3 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>Employee ID</h3>
+                <h3 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>New Tasks</h3>
+                <h5 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>Active Tasks</h5>
+                <h5 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>Completed</h5>
+                <h5 className='w-1/6 text-lg font-medium flex justify-center max-[450px]: w-1/12 text-[8px] font-bold'>Failed</h5>
             </div>
             <div className='h-[80%] overflow-auto'>
                 {userData.map(function (elem, idx) {
